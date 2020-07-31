@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+<div class="login">
+    <img src="{{ url_for('static', filename='avatar.jpg') }}" alt="Avatar">
+    <h1>FORM</h1>
+    <form action='/' method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter Your Name">
+        
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" placeholder="Enter Your Username">
+        
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" placeholder="Enter yout Email">
+        
+        <label for="age"></label>
+        <input type="text" name="age" id="age" placeholder="Enter your age">
+        
+        <input id="button" type="submit" method="POST" value="Login"></input>
+    </form>
+
+{% endblock %}
+</div>    
+</body>
+</html>
